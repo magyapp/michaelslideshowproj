@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akosua Blog</title>
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<style type="text/css">
+		body {
+			
+			margin: 0;
+			background: url("faith8.png"); 
+			
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			z-index: 0.5;
+			border: 15px solid #3e2b14;
+
+			
+		
+		}
+		
+		.one {
+			position: relative;
+			left: 425px;
+			top: 50px;
+			width: 600px;
+   			height: 500px;
+   			vertical-align: top;
+   			box-shadow: 10px 10px 50px 20px black;
+   			}
+   		
+   		
+   		.back-button {
+			position: relative;
+			left: 150px;
+			top: -100px;
+			color: white;
+			border: white;
+			margin-left: 25%;
+			border-radius: 25%;
+			
+		}
+		.forward-button {
+			position: relative;
+			left: 150px;
+			top: -100px;
+			color: white;
+			border: white;
+			margin-left: 25%;
+			margin-bottom: 10%;
+			border-radius: 25%;
+		}
+
+
+		header {
+			height: 100px;
+			width: 100%;
+			background: rgba(29, 33, 38, 0.5);
+
+		}
+		h1 {
+			font-family: 'VT323', monospace;
+			text-align: center;
+			margin-top: 2%;
+			letter-spacing: 20px;
+			font-size: 100px;
+			color: rgb(29, 33, 38);
+		}
+		h3 {
+			font-family: 'Indie Flower', cursive;
+			text-align: center;
+
+		}
+			footer {
+			font-family: 'VT323', monospace;
+			text-align: center;
+			margin-top: 5%;
+			letter-spacing: 20px;
+			font-size: 40px;
+			color: rgb(29, 33, 38);
+			height: 100px;
+			width: 100%;
+			background: rgba(29, 33, 38, 0.5);
+		}
+		span {
+			
+			color: #864b87;
+			letter-spacing: normal;
+			background-color: rgba(119, 35, 11, 0.5);
+
+		}
+		span:hover {
+			color: white;
+		}
+		a {
+			text-decoration: none;
+
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+		
+	</header>
+		<h1>AKOSUA</h1>	<br>
+		<h3>Travel log</h3>
+	<img class="one" src="faith.png">
+	<img class="one" src="faith9.png">
+	<img class="one" src="faith10.png">
+	<img class="one" src="faith22.png">
+	<img class="one" src="faith26.png"><br>
+	
+	<button class="back-button" class="center-button" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="forward-button" class="center-button" onclick="plusDivs(+1)">&#10095;</button>
+	<script type="text/javascript">
+		
+			// body...
+			var slideIndex = 1;
+			showDivs (slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);//showDivs(1 -(-1))////=2
+				//////showDivs(2)
+				///slideIndex = 2
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("one");////x ix equal to an array
+				if (n > x.length) { slideIndex = 1}
+				if (n < 1) { slideIndex = x.length}
+
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none" ;
+				}
+
+
+				//////for loop has finished
+
+				x[slideIndex-1].style.display = "block";///x[0]
+				///x[1].style.display = "block";
+			
+
+		}
+	</script>
+	<footer>
+	<center>
+		<marquee>follow me on <a href="https://www.instagram.com/?hl=en"><span>Instagram</span></a></marquee>
+	</center>
+	</footer>
+	
+</body>
+
+</html>
